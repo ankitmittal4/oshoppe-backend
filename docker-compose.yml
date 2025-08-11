@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  paint-plus-app:
+    image: paintplus
+    container_name: paint-plus
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>OShoppe payment page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+</body>
+</html>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<script>
+async function init() {
+    try {
+        const order_id = "{{order_id}}";
+        const amount = "{{amount}}";
+        const key_id = "{{key_id}}";
+        const productName = "{{product_name}}";
+        const contact = "{{contact}}";
+        const name = "{{name}}";
+        const email = "{{email}}";
+        const description = "{{description}}";
+        const notes = "{{notes}}";
+        const orderId = "{{notes.orderId}}";
+        const successPageUrl = "{{successPageUrl}}";
+        const failPageUrl = "{{failPageUrl}}";
+
+        const options = {
+            key: key_id,
+            amount,
+            currency: "INR",
+            name: productName,
+            description,
+            image: "https://dummyimage.com/600x400/000/fff",
+            order_id,
+            handler: function (response) {
+                alert("Payment Succeeded");
+                window.location.href = successPageUrl;
+            },
+            prefill: {
+                contact: contact,
+                name: name,
+                email: email
+            },
+            notes,
+            theme: {
+                color: "#2300a3"
+            }
+        };
+
+        const razorpayObject = new Razorpay(options);
+
+        razorpayObject.on('payment.failed', function (response) {
+                alert("Payment Failed");
+                window.location.href = failPageUrl;
+        });
+        razorpayObject.open();
+    } catch(err) {
+        console.log(err);
+    }
+}
+init();
+
+</script>
