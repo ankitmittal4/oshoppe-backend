@@ -70,7 +70,8 @@ const ProductUpdate = ({
         }
 
         let updatedProduct;
-
+        // console.log("Sd: ", shortDescription);
+        // console.log("Sd: ", name);
         if (productId) {
             // Use upsert to update the product or create a new one if it doesn't exist
             updatedProduct = await ProductModel.findOneAndUpdate(
