@@ -15,9 +15,11 @@ const s3Client = new S3Client({
 });
 
 export default async (name, image) => {
+
     try {
         const buffer = Buffer.from(image.data);
 
+        // console.log("In image upload");
         const uploadParams = {
             Bucket: S3_BUCKET,
             Key: `${NODE_ENV}/${name}.jpg`,
@@ -28,6 +30,7 @@ export default async (name, image) => {
         const command = new PutObjectCommand(uploadParams);
         await s3Client.send(command);
 
+        // console.log("image link", name);
         return `${name}.jpg`;
     } catch (err) {
         return new Error('Error while uploading image');
