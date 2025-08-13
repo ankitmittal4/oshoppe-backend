@@ -2,7 +2,7 @@ export const {
     NODE_ENV,
     BASE_URL,
     MONGO_CONNECTION_STRING,
-    PORT,
+    PORT = 3000,
     ACCESS_TOKEN_SECRET,
     ACCESS_TOKEN_EXPIRY = '40d',
     SECRET_STRING,
