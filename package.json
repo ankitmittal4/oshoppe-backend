@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "server:dev": "nodemon server/server.js",
-    "start": "node server/server.js"
+    "start": "node -r @babel/register server/server.js"
   },
   "repository": {
     "type": "git",
