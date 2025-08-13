@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import busboyBodyParser from 'busboy-body-parser';
-import connectDB from './db/index';
+import connectDB from './db/index.js';
 import { NODE_ENV } from './constants';
 import ActivateRoutes from './routes';
 const PORT = process.env.PORT || 3000;
@@ -32,7 +32,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.get('/', (_, res) => {
-  res.send(`<h1>Paint Plus ${NODE_ENV} Server</h1>`);
+  res.send(`<h1>Oshoppe ${NODE_ENV} Server</h1>`);
 });
 
 try {
