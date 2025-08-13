@@ -4,9 +4,9 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import busboyBodyParser from 'busboy-body-parser';
 import connectDB from './db/index';
-import { PORT, NODE_ENV } from './constants';
+import { NODE_ENV } from './constants';
 import ActivateRoutes from './routes';
-
+const PORT = process.env.PORT || 3000;
 connectDB();
 
 const app = express();
@@ -32,16 +32,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.get('/', (_, res) => {
-    res.send(`<h1>Paint Plus ${NODE_ENV} Server</h1>`);
+  res.send(`<h1>Paint Plus ${NODE_ENV} Server</h1>`);
 });
 
-const port = PORT || 3001;
 try {
-    app.listen(port, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
 } catch (error) {
-    console.log('Error while running server', error);
+  console.log('Error while running server', error);
 }
 
 export default app;
