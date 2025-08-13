@@ -39,8 +39,10 @@ export default ({
         let successPageUrl;
         let failPageUrl;
         if (NODE_ENV === 'development') {
-            successPageUrl = `https://uat.oshoppe.in/profile/order/payment/${orderId}`;
-            failPageUrl = 'https://uat.oshoppe.in/cart';
+            // successPageUrl = `https://uat.oshoppe.in/profile/order/payment/${orderId}`;
+            // failPageUrl = 'https://uat.oshoppe.in/cart';
+            successPageUrl = `http://localhost:3001/profile/order/payment/${orderId}`;
+            failPageUrl = 'http://localhost:3001/cart';
         } else {
             successPageUrl = `https://www.oshoppe.in/profile/order/payment/${orderId}`;
             failPageUrl = 'https://www.oshoppe.in/cart';
