@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import busboyBodyParser from 'busboy-body-parser';
 import connectDB from './db/index.js';
 import { NODE_ENV } from './constants.js';
-import ActivateRoutes from './routes';
+import ActivateRoutes from './routes/index.js';
 const PORT = process.env.PORT || 3000;
 connectDB();
 
