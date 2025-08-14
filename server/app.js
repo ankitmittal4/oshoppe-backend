@@ -35,6 +35,10 @@ app.get('/', (_, res) => {
   res.send(`<h1>Oshoppe ${NODE_ENV} Server</h1>`);
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 try {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
