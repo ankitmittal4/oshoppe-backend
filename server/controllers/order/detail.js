@@ -216,7 +216,7 @@ export default ({
                     dealerShopAddress: '$dealer.addressLine1',
                     invoiceId: '$transaction._id',
                     invoiceDate: '$transaction.createdAt',
-                    paymentMode: '$transaction.razorpayResponse.paymentMethod',
+                    paymentMode: '$transaction.razorpayResponse.method',
                 },
             },
         ]);

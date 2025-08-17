@@ -74,14 +74,14 @@ export default ({
                         $concat: ['$customer.firstName', ' ', '$customer.lastName'],
                     },
                     transactionId: '$transaction._id',
-                    paymentMode: '$transaction.razorpayResponse.paymentMethod',
+                    paymentMode: '$transaction.razorpayResponse.method',
                     phoneNumber: '$customer.phoneNumber',
                     email: '$customer.email',
                     amount: '$transaction.amount',
                 },
             },
         ]);
-
+        // console.log(data);
         resolve(new ApiResponseUtility({
             message: 'Order payment details fetched successfully.',
             data,

@@ -25,7 +25,7 @@ const prepareDecodedData = ({ token, type }) => new Promise(async (resolve, reje
                 }
 
                 resolve({
-                    id, type,
+                    id, type, userData
                 });
             }
         }

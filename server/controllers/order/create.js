@@ -35,6 +35,7 @@ export default ({
             deliveryCharges,
             addressRef: defaultAddress._id,
         });
+        // console.log("In order: ", order._id);
 
         const shippingDate = new Date();
         shippingDate.setDate(shippingDate.getDate() + 3);
@@ -55,9 +56,9 @@ export default ({
             });
         });
 
-        const paymentUrl = `${BASE_URL}payment/webPage?id=${id}&orderId=${order._id}`;
+        // const paymentUrl = `${BASE_URL}payment/webPage?id=${id}&orderId=${order._id}`;
 
-        resolve(new ApiResponseUtility({ message: 'Order placed successfully.', data: paymentUrl }));
+        resolve(new ApiResponseUtility({ message: 'Order placed successfully.', data: order._id }));
     } catch (error) {
         console.log(error);
         reject(new ApiErrorUtility({ message: 'Error while placing order.', error }));

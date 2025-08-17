@@ -58,7 +58,7 @@ export default (app) => {
     app.post(
         `${prefix}order/create`,
         AuthenticationMiddleware.authenticateCustomer,
-        (req, res) => ResolverUtility(req, res, OrderController.OrderCreateController),
+        (req, res) => ResolverUtility(req, res, OrderController.ContOrderCreateroller),
     );
     app.post(
         `${prefix}order/list`,
