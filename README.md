@@ -1,4 +1,7 @@
 # <p align="center" >🛒 Oshoppe – E-Commerce Platform (Backend) </p>
+
+<p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:38B2AC,100:2563EB&height=200&section=header&text=Oshoppe%20Backend&fontSize=40&fontColor=ffffff&animation=twinkling&fontAlignY=35" /> </p>
+
 <p align="center"> <img src="https://img.shields.io/badge/Node.js-18-green?style=for-the-badge&logo=node.js" alt="Node.js"/> <img src="https://img.shields.io/badge/Express.js-4.x-black?style=for-the-badge&logo=express" alt="Express.js"/> <img src="https://img.shields.io/badge/MongoDB-6.x-4DB33D?style=for-the-badge&logo=mongodb" alt="MongoDB"/> <img src="https://img.shields.io/badge/Mongoose-7.x-red?style=for-the-badge&logo=mongoose" alt="Mongoose"/> <img src="https://img.shields.io/badge/AWS S3-Storage-orange?style=for-the-badge&logo=amazonaws" alt="AWS S3"/> <img src="https://img.shields.io/badge/Razorpay-Payment-blue?style=for-the-badge&logo=razorpay" alt="Razorpay"/> </p>
 <p align="center">
   <b>Oshoppe Backend powers the e-commerce platform with secure APIs for authentication, product management, order handling, dealer management, payments, and image storage.
